@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ケアマネ支援ソフト</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/dashboard">ケアマネ支援</a>
+    <div class="search-wrap">
+      <input id="global-search" type="search" placeholder="利用者を検索（氏名・かな・被保険者番号）  [/]" autocomplete="off">
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
+    <div class="topbar-right">
+      <select id="staff-select" title="操作する担当者"></select>
+      <button class="btn small ghost" data-action="backup" title="バックアップを保存">バックアップ</button>
+    </div>
+  </header>
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="#/dashboard" data-nav="dashboard">やること</a>
+      <a href="#/users" data-nav="users">利用者一覧</a>
+      <a href="#/billing" data-nav="billing">給付管理・請求</a>
+      <a href="#/providers" data-nav="providers">サービス事業所</a>
+      <a href="#/settings" data-nav="settings">設定・マスタ</a>
+      <div class="sidebar-section">最近の利用者</div>
+      <div id="recent-users"></div>
+      <div class="sidebar-help">
+        <div><kbd>/</kbd> 利用者検索</div>
+        <div><kbd>Ctrl</kbd>+<kbd>S</kbd> 保存</div>
+        <div><kbd>Alt</kbd>+<kbd>1</kbd>〜<kbd>7</kbd> タブ切替</div>
+      </div>
+    </nav>
+    <main id="view" class="view"></main>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <div id="print-area" class="print-area"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/master.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/calc.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/users.js"></script>
+  <script src="js/views/plan.js"></script>
+  <script src="js/views/schedule.js"></script>
+  <script src="js/views/records.js"></script>
+  <script src="js/views/billing.js"></script>
+  <script src="js/views/settings.js"></script>
+  <script src="js/print.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
